@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-class SimpleIinterpreterTest {
-    private SimpleIinterpreter simpleIinterpreter;
+class SimpleInterpreterTest {
+    private SimpleInterpreter simpleInterpreter;
 
     @BeforeEach
     void setUp() {
-        simpleIinterpreter = new SimpleIinterpreter();
+        simpleInterpreter = new SimpleInterpreter();
     }
 
     @Test
@@ -19,9 +19,9 @@ class SimpleIinterpreterTest {
         // Given
 
         // When
-        int plus = simpleIinterpreter.interpret(1, new String[]{"+"}, new int[]{1});
-        int minus = simpleIinterpreter.interpret(1, new String[]{"-"}, new int[]{1});
-        int multiply = simpleIinterpreter.interpret(1, new String[]{"*"}, new int[]{1});
+        int plus = simpleInterpreter.interpret(1, new String[]{"+"}, new int[]{1});
+        int minus = simpleInterpreter.interpret(1, new String[]{"-"}, new int[]{1});
+        int multiply = simpleInterpreter.interpret(1, new String[]{"*"}, new int[]{1});
 
         // Then
         assertThat(plus, equalTo(2));
@@ -34,7 +34,7 @@ class SimpleIinterpreterTest {
         // Given
 
         // When
-        int result = simpleIinterpreter.interpret(1, new String[]{"/"}, new int[]{1});
+        int result = simpleInterpreter.interpret(1, new String[]{"/"}, new int[]{1});
 
         // Then
         assertThat(result, equalTo(-1));

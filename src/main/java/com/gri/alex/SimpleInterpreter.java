@@ -4,7 +4,7 @@ package com.gri.alex;
  * User: Alex
  * Date: 6-Jan-19
  */
-public class SimpleIinterpreter {
+public class SimpleInterpreter {
 
     public int interpret(int value, String[] commands, int[] args) {
         if (commands.length != args.length) {
