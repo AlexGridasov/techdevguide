@@ -38,7 +38,17 @@ class SimpleInterpreterTest {
 
         // Then
         assertThat(result, equalTo(-1));
+    }
 
+    @Test
+    void shouldInterpretTwoCommands() {
+        // Given
+
+        // When
+        int result = simpleInterpreter.interpret(1, new String[]{"+", "*"}, new int[]{1, 3});
+
+        // Then
+        assertThat(result, equalTo(6));
     }
 
 }

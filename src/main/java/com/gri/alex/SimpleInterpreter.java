@@ -9,21 +9,25 @@ public class SimpleInterpreter {
     public int interpret(int value, String[] commands, int[] args) {
         if (commands.length != args.length) {
             System.out.println("Number of Commands and Args different.");
+            return -1;
         }
 
-        int result;
-        switch(commands[0]) {
-            case "+":
-                result = value + args[0];
-                break;
-            case "-":
-                result = value - args[0];
-                break;
-            case "*":
-                result = value * args[0];
-                break;
-            default:
-                return -1;
+        int result = value;
+        for (int i = 0; i < commands.length; i++) {
+
+            switch(commands[i]) {
+                case "+":
+                    result += args[i];
+                    break;
+                case "-":
+                    result -= args[i];
+                    break;
+                case "*":
+                    result *= args[i];
+                    break;
+                default:
+                    return -1;
+            }
         }
 
         return result;
