@@ -7,7 +7,7 @@ import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasEntry;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Word0Test {
 
@@ -25,7 +25,7 @@ class Word0Test {
         Map<String, Integer> actualMap = word0.word0(inputArray);
 
         // Then
-        assertTrue(actualMap.equals(expectedMap));
+        assertEquals(actualMap, expectedMap);
         assertThat(actualMap, hasEntry("a", 0));
         assertThat(actualMap, hasEntry("b", 0));
     }
